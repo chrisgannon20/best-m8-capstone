@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Voting Page</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<span id="nav-menu" class="material-symbols-outlined"> menu </span>
+		</header>
+		<main>
+			<div id="token-section">
+				<img src="./media/piggy-bank.png" alt="piggy bank" id="piggy-bank" />
+				<div id="piggy-bank-balance">60</div>
+				<button
+					id="token-value-1"
+					class="tkn tkn--is-selected"
+					oncontextmenu="return false;"
+				>
+					1
+				</button>
+				<button id="token-value-5" class="tkn" oncontextmenu="return false;">
+					5
+				</button>
+				<button id="token-value-10" class="tkn" oncontextmenu="return false;">
+					10
+				</button>
+			</div>
+			<div id="feedback-section">
+				<div class="arcade-bundle">
+					<p id="counter-a">0</p>
+					<img
+						src="./media/arcade 1.png"
+						alt="arcade a"
+						id="arcade-a"
+						class="arcade"
+						oncontextmenu="return false;"
+					/>
+				</div>
+				<div class="arcade-bundle">
+					<p id="counter-b">0</p>
+					<img
+						src="./media/arcade 2.png"
+						alt="arcade b"
+						id="arcade-b"
+						class="arcade"
+						oncontextmenu="return false;"
+					/>
+				</div>
+				<div class="arcade-bundle">
+					<p id="counter-c">0</p>
+					<img
+						src="./media/arcade 3.png"
+						alt="arcade c"
+						id="arcade-c"
+						class="arcade"
+						oncontextmenu="return false;"
+					/>
+				</div>
+			</div>
+		</main>
+		<script src="./script.js"></script>
+	</body>
+</html>

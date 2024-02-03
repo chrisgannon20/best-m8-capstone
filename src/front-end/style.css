@@ -1,0 +1,72 @@
+.material-symbols-outlined {
+	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	position: relative;
+	text-align: center;
+	color: black;
+}
+
+header {
+	position: relative;
+	height: 40px;
+	width: 100%;
+	background-color: orange;
+}
+
+#nav-menu {
+	float: left;
+	font-size: 40px;
+}
+
+main {
+	position: relative;
+	height: calc(100% - 40px);
+	width: inherit;
+}
+
+#token-section {
+	position: relative;
+	height: 40%;
+	background-color: antiquewhite;
+}
+
+#feedback-section {
+	position: relative;
+	height: 60%;
+	background-color: chocolate;
+}
+
+.tkn {
+	border-radius: 20px;
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+}
+
+.tkn--is-selected {
+	background-color: gold;
+	border-color: goldenrod;
+}
+
+.arcade {
+	height: 120px;
+	width: 80px;
+	cursor: pointer;
+}
+
+.arcade-bundle {
+	display: inline-block;
+}
+
+#piggy-bank {
+	width: 200px;
+	height: auto;
+}
