@@ -9,6 +9,7 @@
 html,
 body {
 	height: 100%;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -50,7 +51,8 @@ main {
 
 #piggy-container {
 	position: relative;
-	padding: 40px 0;
+	padding-top: 5vh;
+	height: 50%;
 }
 
 #piggy-bank {
@@ -58,8 +60,16 @@ main {
 	height: auto;
 }
 
+#piggy-bank-balance {
+	position: relative;
+	font-size: 40px;
+	transform: translate(0, -110px);
+}
+
 #token-container {
 	position: relative;
+	padding-top: 2vh;
+	height: 30%;
 }
 
 .tkn {
