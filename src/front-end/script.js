@@ -53,6 +53,7 @@ arcade_a.mousedown(function (e) {
 	let tokens_spent = parseInt(counter_a.text());
 
 	TokenTransaction(e, counter_a, tokens_spent);
+	SortCounters();
 });
 
 // ==== ARCADE B ====
@@ -61,6 +62,7 @@ arcade_b.mousedown(function (e) {
 	let tokens_spent = parseInt(counter_b.text());
 
 	TokenTransaction(e, counter_b, tokens_spent);
+	SortCounters();
 });
 
 // ==== ARCADE C ====
@@ -69,10 +71,12 @@ arcade_c.mousedown(function (e) {
 	let tokens_spent = parseInt(counter_c.text());
 
 	TokenTransaction(e, counter_c, tokens_spent);
+	SortCounters();
 });
 
 // ==== Transaction Function ====
 // Function to determine what kind of click triggered the event and add or deduct accordingly
+
 function TokenTransaction(event, counter, spent) {
 	console.log(`spent: ${spent}`);
 	console.log(`pool: ${tokens_pool}`);
@@ -120,4 +124,37 @@ function TokenTransaction(event, counter, spent) {
 		default:
 			break;
 	}
+}
+
+// ==== Sort Counters Function ====
+// Sorts counters least to greatest and colors them accordingly
+
+function SortCounters() {
+	// grabs integer (token count) of each counter
+	cntr_a = parseInt(counter_a.text());
+	cntr_b = parseInt(counter_b.text());
+	cntr_c = parseInt(counter_c.text());
+
+	// add token count to an array and sort smallest to largest
+	let tokenArray = [cntr_a, cntr_b, cntr_c];
+	tokenArray = tokenArray.sort((a, b) => a - b);
+
+	// create array of all three counter elements
+	// iterates through and decides which has the most tokens and which the least
+	// counters w/ most turn green, counters w/ anything less turn red
+	let counterArray = [counter_a, counter_b, counter_c];
+	counterArray.forEach((e) => {
+		// resets the colors of the existing counters
+		e.removeClass("cntr--is-most");
+		e.removeClass("cntr--is-least");
+		e.removeClass("bg-white");
+
+		if (e.text() == 0) {
+			e.addClass("bg-white"); // colors counter white
+		} else if (e.text() == tokenArray[2]) {
+			e.addClass("cntr--is-most"); // colors counter green
+		} else {
+			e.addClass("cntr--is-least"); // colors counter red
+		}
+	});
 }

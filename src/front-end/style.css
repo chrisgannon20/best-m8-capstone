@@ -2,6 +2,10 @@
 	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
+.bg-white {
+	background-color: white;
+}
+
 html,
 body {
 	height: 100%;
@@ -44,15 +48,25 @@ main {
 	background-color: chocolate;
 }
 
+#piggy-container {
+	position: relative;
+	padding: 40px 0;
+}
+
 #piggy-bank {
 	width: 200px;
 	height: auto;
 }
 
+#token-container {
+	position: relative;
+}
+
 .tkn {
-	border-radius: 20px;
-	height: 40px;
-	width: 40px;
+	border-radius: 30px;
+	height: 60px;
+	width: 60px;
+	margin: 0 8px;
 	cursor: pointer;
 }
 
@@ -72,16 +86,20 @@ main {
 }
 
 .cntr {
-	height: 28px;
 	width: 80px;
-	background-color: white;
 	color: black;
+	padding: 6px 0;
+	text-align: center;
 	border: solid black 2px;
-	border-radius: 20px;
+	border-radius: 14px;
 }
 
 .cntr--is-most {
+	background-color: lightgreen;
+	color: green;
 }
 
 .cntr--is-least {
+	background-color: lightcoral;
+	color: maroon;
 }
