@@ -17,9 +17,10 @@ let counter_a = $("#counter-a");
 let counter_b = $("#counter-b");
 let counter_c = $("#counter-c");
 
-let piggy = $("#piggy-bank-balance"); // global variable to store piggy bank element
+let piggyBal = $("#piggy-bank-balance"); // global variable to store piggy bank balance element
+let piggy = $("#piggy-bank"); // global variable to store piggy bank image element
 
-piggy.text(max_tokens); // set piggy bank to max pool size
+piggyBal.text(max_tokens); // set piggy bank to max pool size
 
 // ==== SET (CHOOSE) TOKEN VALUE ===
 
@@ -54,6 +55,14 @@ arcade_a.mousedown(function (e) {
 
 	TokenTransaction(e, counter_a, tokens_spent);
 	SortCounters();
+
+	JiggleMe(piggy);
+	BounceMe(counter_a);
+});
+
+arcade_a.mouseup(function (e) {
+	RemoveJiggle(piggy);
+	RemoveBounce(counter_a);
 });
 
 // ==== ARCADE B ====
@@ -63,8 +72,15 @@ arcade_b.mousedown(function (e) {
 
 	TokenTransaction(e, counter_b, tokens_spent);
 	SortCounters();
+
+	JiggleMe(piggy);
+	BounceMe(counter_b);
 });
 
+arcade_b.mouseup(function (e) {
+	RemoveJiggle(piggy);
+	RemoveBounce(counter_b);
+});
 // ==== ARCADE C ====
 // checks that the piggy-bank has been clicked and does something
 arcade_c.mousedown(function (e) {
@@ -72,8 +88,15 @@ arcade_c.mousedown(function (e) {
 
 	TokenTransaction(e, counter_c, tokens_spent);
 	SortCounters();
+
+	JiggleMe(piggy);
+	BounceMe(counter_c);
 });
 
+arcade_c.mouseup(function (e) {
+	RemoveJiggle(piggy);
+	RemoveBounce(counter_c);
+});
 // ==== Transaction Function ====
 // Function to determine what kind of click triggered the event and add or deduct accordingly
 
@@ -88,17 +111,17 @@ function TokenTransaction(event, counter, spent) {
 			// 1. that we aren't deducting more than we have available in our bank
 			// 2. Even if we have a *token_value* selected that is greater than our bank, it will only deduct what is left
 			if (token_value > tokens_pool) {
-				let leftovers = parseInt(piggy.text());
+				let leftovers = parseInt(piggyBal.text());
 				counter.text(spent + leftovers);
 				// reset values to zero since everything is expended
-				piggy.text(0);
+				piggyBal.text(0);
 				tokens_pool = 0;
 				spent = 0;
 				break;
 			} else {
 				counter.text(spent + token_value);
 				tokens_pool -= token_value;
-				piggy.text(tokens_pool);
+				piggyBal.text(tokens_pool);
 				break;
 			}
 
@@ -111,13 +134,13 @@ function TokenTransaction(event, counter, spent) {
 			if (spent < token_value) {
 				let leftovers = parseInt(counter.text());
 				tokens_pool += leftovers;
-				piggy.text(tokens_pool);
+				piggyBal.text(tokens_pool);
 				counter.text(0);
 				break;
 			} else {
 				counter.text(spent - token_value);
 				tokens_pool += token_value;
-				piggy.text(tokens_pool);
+				piggyBal.text(tokens_pool);
 				break;
 			}
 
@@ -157,4 +180,34 @@ function SortCounters() {
 			e.addClass("cntr--is-least"); // colors counter red
 		}
 	});
+}
+
+// applies jiggle class to element (jiggle animation)
+function JiggleMe(element) {
+	let value = GetRandomInt(0, 10);
+	if (value % 2 == 0) {
+		element.addClass("jiggleright");
+	} else {
+		element.addClass("jiggleleft");
+	}
+}
+
+// resets jiggle animation
+function RemoveJiggle(element) {
+	element.removeClass(["jiggleleft", "jiggleright"]);
+}
+
+// for random animation direction
+function GetRandomInt(min, max) {
+	const minCeiled = Math.ceil(min);
+	const maxFloored = Math.floor(max);
+	return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+}
+
+function BounceMe(element) {
+	element.addClass("bounce");
+}
+
+function RemoveBounce(element) {
+	element.removeClass("bounce");
 }
