@@ -44,6 +44,11 @@ main {
 	background-color: chocolate;
 }
 
+#piggy-bank {
+	width: 200px;
+	height: auto;
+}
+
 .tkn {
 	border-radius: 20px;
 	height: 40px;
@@ -66,7 +71,17 @@ main {
 	display: inline-block;
 }
 
-#piggy-bank {
-	width: 200px;
-	height: auto;
+.cntr {
+	height: 28px;
+	width: 80px;
+	background-color: white;
+	color: black;
+	border: solid black 2px;
+	border-radius: 20px;
+}
+
+.cntr--is-most {
+}
+
+.cntr--is-least {
 }
