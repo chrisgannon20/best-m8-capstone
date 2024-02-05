@@ -136,6 +136,10 @@ main {
 	text-align: justify;
 }
 
+.prompt p {
+	margin: 0 auto;
+}
+
 .arrow {
 	font-size: 80px;
 	cursor: pointer;
@@ -219,5 +223,21 @@ main {
 	}
 	100% {
 		transform: translate(0, 0);
+	}
+}
+
+.swipe-in {
+	position: relative;
+	animation-name: swipe-in;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes swipe-in {
+	0% {
+		transform: translate(1200px, 0px);
+	}
+	100% {
+		transform: translate(0px, 0px);
 	}
 }
