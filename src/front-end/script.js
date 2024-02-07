@@ -1,26 +1,62 @@
 // ==== SET GLOBAL VARIABLES ====
+// CATEGORY.html VARIABLES
 const max_tokens = 60; // maximum token pool
 let tokens_pool = max_tokens; // total tokens left in pool
 
 let token_value = 1; // default token value
 
 // global variables to store *token_value* selection elements
-let token1 = $("#token-value-1");
-let token5 = $("#token-value-5");
-let token10 = $("#token-value-10");
+const token1 = $("#token-value-1");
+const token5 = $("#token-value-5");
+const token10 = $("#token-value-10");
 
 // global variables to store arcade machine (and their counters) elements
-let arcade_a = $("#arcade-a");
-let arcade_b = $("#arcade-b");
-let arcade_c = $("#arcade-c");
-let counter_a = $("#counter-a");
-let counter_b = $("#counter-b");
-let counter_c = $("#counter-c");
+const arcade_a = $("#arcade-a");
+const arcade_b = $("#arcade-b");
+const arcade_c = $("#arcade-c");
+const counter_a = $("#counter-a");
+const counter_b = $("#counter-b");
+const counter_c = $("#counter-c");
 
-let piggyBal = $("#piggy-bank-balance"); // global variable to store piggy bank balance element
-let piggy = $("#piggy-bank"); // global variable to store piggy bank image element
+const category_counterArray = [counter_a, counter_b, counter_c];
+
+const piggyBal = $("#piggy-bank-balance"); // global variable to store piggy bank balance element
+const piggy = $("#piggy-bank"); // global variable to store piggy bank image element
 
 piggyBal.text(max_tokens); // set piggy bank to max pool size
+
+// VOTING.html VARIABLES
+const cntr_a = $("#cntr-a");
+const cntr_b = $("#cntr-b");
+const cntr_c = $("#cntr-c");
+const cntr_d = $("#cntr-d");
+const cntr_e = $("#cntr-e");
+const cntr_f = $("#cntr-f");
+const cntr_g = $("#cntr-g");
+const cntr_h = $("#cntr-h");
+const cntr_i = $("#cntr-i");
+
+const prompt_a = $("#prompt-a");
+const prompt_b = $("#prompt-b");
+const prompt_c = $("#prompt-c");
+const prompt_d = $("#prompt-d");
+const prompt_e = $("#prompt-e");
+const prompt_f = $("#prompt-f");
+const prompt_g = $("#prompt-g");
+const prompt_h = $("#prompt-h");
+const prompt_i = $("#prompt-i");
+
+const voting_counterArray = [
+	cntr_a,
+	cntr_b,
+	cntr_c,
+	cntr_d,
+	cntr_e,
+	cntr_f,
+	cntr_g,
+	cntr_h,
+	cntr_i,
+];
 
 // ==== SET (CHOOSE) TOKEN VALUE ===
 
@@ -54,7 +90,7 @@ arcade_a.mousedown(function (e) {
 	let tokens_spent = parseInt(counter_a.text());
 
 	TokenTransaction(e, counter_a, tokens_spent);
-	SortCounters();
+	SortCounters(category_counterArray);
 
 	JiggleMe(piggy);
 	BounceMe(counter_a);
@@ -71,7 +107,7 @@ arcade_b.mousedown(function (e) {
 	let tokens_spent = parseInt(counter_b.text());
 
 	TokenTransaction(e, counter_b, tokens_spent);
-	SortCounters();
+	SortCounters(category_counterArray);
 
 	JiggleMe(piggy);
 	BounceMe(counter_b);
@@ -81,13 +117,14 @@ arcade_b.mouseup(function (e) {
 	RemoveJiggle(piggy);
 	RemoveBounce(counter_b);
 });
+
 // ==== ARCADE C ====
 // checks that the piggy-bank has been clicked and does something
 arcade_c.mousedown(function (e) {
 	let tokens_spent = parseInt(counter_c.text());
 
 	TokenTransaction(e, counter_c, tokens_spent);
-	SortCounters();
+	SortCounters(category_counterArray);
 
 	JiggleMe(piggy);
 	BounceMe(counter_c);
@@ -97,6 +134,119 @@ arcade_c.mouseup(function (e) {
 	RemoveJiggle(piggy);
 	RemoveBounce(counter_c);
 });
+
+// ==== ACTION ITEMS ====
+prompt_a.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_a.text());
+
+	TokenTransaction(e, cntr_a, tokens_spent);
+	SortCounters(voting_counterArray);
+
+	BounceMe(cntr_a);
+});
+
+prompt_b.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_b.text());
+
+	TokenTransaction(e, cntr_b, tokens_spent);
+	SortCounters(voting_counterArray);
+
+	BounceMe(cntr_b);
+});
+
+prompt_c.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_c.text());
+
+	TokenTransaction(e, cntr_c, tokens_spent);
+	SortCounters(voting_counterArray);
+
+	BounceMe(cntr_c);
+});
+
+prompt_d.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_d.text());
+
+	TokenTransaction(e, cntr_d, tokens_spent);
+	SortCounters(voting_counterArray);
+
+	BounceMe(cntr_d);
+});
+
+prompt_e.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_e.text());
+
+	TokenTransaction(e, cntr_e, tokens_spent);
+	SortCounters(voting_counterArray);
+
+	BounceMe(cntr_e);
+});
+
+prompt_f.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_f.text());
+
+	TokenTransaction(e, cntr_f, tokens_spent);
+	SortCounters(voting_counterArray);
+
+	BounceMe(cntr_f);
+});
+
+prompt_g.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_g.text());
+
+	TokenTransaction(e, cntr_g, tokens_spent);
+	SortCounters(voting_counterArray);
+
+	BounceMe(cntr_g);
+});
+
+prompt_h.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_h.text());
+
+	TokenTransaction(e, cntr_h, tokens_spent);
+	SortCounters(voting_counterArray);
+
+	BounceMe(cntr_h);
+});
+
+prompt_i.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_i.text());
+
+	TokenTransaction(e, cntr_i, tokens_spent);
+	SortCounters(voting_counterArray);
+
+	BounceMe(cntr_i);
+});
+
+prompt_a.mouseup(function (e) {
+	RemoveBounce(cntr_a);
+});
+prompt_b.mouseup(function (e) {
+	RemoveBounce(cntr_b);
+});
+prompt_c.mouseup(function (e) {
+	RemoveBounce(cntr_c);
+});
+prompt_d.mouseup(function (e) {
+	RemoveBounce(cntr_d);
+});
+prompt_e.mouseup(function (e) {
+	RemoveBounce(cntr_e);
+});
+prompt_f.mouseup(function (e) {
+	RemoveBounce(cntr_f);
+});
+prompt_g.mouseup(function (e) {
+	RemoveBounce(cntr_g);
+});
+prompt_h.mouseup(function (e) {
+	RemoveBounce(cntr_h);
+});
+prompt_i.mouseup(function (e) {
+	RemoveBounce(cntr_i);
+});
+
+$(document).ready(function () {});
+
 // ==== Transaction Function ====
 // Function to determine what kind of click triggered the event and add or deduct accordingly
 
@@ -152,20 +302,18 @@ function TokenTransaction(event, counter, spent) {
 // ==== Sort Counters Function ====
 // Sorts counters least to greatest and colors them accordingly
 
-function SortCounters() {
-	// grabs integer (token count) of each counter
-	cntr_a = parseInt(counter_a.text());
-	cntr_b = parseInt(counter_b.text());
-	cntr_c = parseInt(counter_c.text());
+function SortCounters(counterArray) {
+	let tokenArray = [];
+
+	counterArray.forEach((e) => {
+		tokenArray.push(e.text());
+	});
 
 	// add token count to an array and sort smallest to largest
-	let tokenArray = [cntr_a, cntr_b, cntr_c];
 	tokenArray = tokenArray.sort((a, b) => a - b);
 
-	// create array of all three counter elements
 	// iterates through and decides which has the most tokens and which the least
 	// counters w/ most turn green, counters w/ anything less turn red
-	let counterArray = [counter_a, counter_b, counter_c];
 	counterArray.forEach((e) => {
 		// resets the colors of the existing counters
 		e.removeClass("cntr--is-most");
@@ -174,7 +322,7 @@ function SortCounters() {
 
 		if (e.text() == 0) {
 			e.addClass("bg-white"); // colors counter white
-		} else if (e.text() == tokenArray[2]) {
+		} else if (e.text() == tokenArray[tokenArray.length - 1]) {
 			e.addClass("cntr--is-most"); // colors counter green
 		} else {
 			e.addClass("cntr--is-least"); // colors counter red
