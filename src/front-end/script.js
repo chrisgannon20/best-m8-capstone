@@ -26,36 +26,36 @@ const piggy = $("#piggy-bank"); // global variable to store piggy bank image ele
 piggyBal.text(max_tokens); // set piggy bank to max pool size
 
 // VOTING.html VARIABLES
-const cntr_a = $("#cntr-a");
-const cntr_b = $("#cntr-b");
-const cntr_c = $("#cntr-c");
-const cntr_d = $("#cntr-d");
-const cntr_e = $("#cntr-e");
-const cntr_f = $("#cntr-f");
-const cntr_g = $("#cntr-g");
-const cntr_h = $("#cntr-h");
-const cntr_i = $("#cntr-i");
+const cntr_1 = $("#cntr-1");
+const cntr_2 = $("#cntr-2");
+const cntr_3 = $("#cntr-3");
+const cntr_4 = $("#cntr-4");
+const cntr_5 = $("#cntr-5");
+const cntr_6 = $("#cntr-6");
+const cntr_7 = $("#cntr-7");
+const cntr_8 = $("#cntr-8");
+const cntr_9 = $("#cntr-9");
 
-const prompt_a = $("#prompt-a");
-const prompt_b = $("#prompt-b");
-const prompt_c = $("#prompt-c");
-const prompt_d = $("#prompt-d");
-const prompt_e = $("#prompt-e");
-const prompt_f = $("#prompt-f");
-const prompt_g = $("#prompt-g");
-const prompt_h = $("#prompt-h");
-const prompt_i = $("#prompt-i");
+const prompt_1 = $("#prompt-1");
+const prompt_2 = $("#prompt-2");
+const prompt_3 = $("#prompt-3");
+const prompt_4 = $("#prompt-4");
+const prompt_5 = $("#prompt-5");
+const prompt_6 = $("#prompt-6");
+const prompt_7 = $("#prompt-7");
+const prompt_8 = $("#prompt-8");
+const prompt_9 = $("#prompt-9");
 
 const voting_counterArray = [
-	cntr_a,
-	cntr_b,
-	cntr_c,
-	cntr_d,
-	cntr_e,
-	cntr_f,
-	cntr_g,
-	cntr_h,
-	cntr_i,
+	cntr_1,
+	cntr_2,
+	cntr_3,
+	cntr_4,
+	cntr_5,
+	cntr_6,
+	cntr_7,
+	cntr_8,
+	cntr_9,
 ];
 
 // ==== SET (CHOOSE) TOKEN VALUE ===
@@ -136,113 +136,113 @@ arcade_c.mouseup(function (e) {
 });
 
 // ==== ACTION ITEMS ====
-prompt_a.mousedown(function (e) {
-	let tokens_spent = parseInt(cntr_a.text());
+prompt_1.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_1.text());
 
-	TokenTransaction(e, cntr_a, tokens_spent);
+	TokenTransaction(e, cntr_1, tokens_spent);
 	SortCounters(voting_counterArray);
 
-	BounceMe(cntr_a);
+	BounceMe(cntr_1);
 });
 
-prompt_b.mousedown(function (e) {
-	let tokens_spent = parseInt(cntr_b.text());
+prompt_2.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_2.text());
 
-	TokenTransaction(e, cntr_b, tokens_spent);
+	TokenTransaction(e, cntr_2, tokens_spent);
 	SortCounters(voting_counterArray);
 
-	BounceMe(cntr_b);
+	BounceMe(cntr_2);
 });
 
-prompt_c.mousedown(function (e) {
-	let tokens_spent = parseInt(cntr_c.text());
+prompt_3.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_3.text());
 
-	TokenTransaction(e, cntr_c, tokens_spent);
+	TokenTransaction(e, cntr_3, tokens_spent);
 	SortCounters(voting_counterArray);
 
-	BounceMe(cntr_c);
+	BounceMe(cntr_3);
 });
 
-prompt_d.mousedown(function (e) {
-	let tokens_spent = parseInt(cntr_d.text());
+prompt_4.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_4.text());
 
-	TokenTransaction(e, cntr_d, tokens_spent);
+	TokenTransaction(e, cntr_4, tokens_spent);
 	SortCounters(voting_counterArray);
 
-	BounceMe(cntr_d);
+	BounceMe(cntr_4);
 });
 
-prompt_e.mousedown(function (e) {
-	let tokens_spent = parseInt(cntr_e.text());
+prompt_5.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_5.text());
 
-	TokenTransaction(e, cntr_e, tokens_spent);
+	TokenTransaction(e, cntr_5, tokens_spent);
 	SortCounters(voting_counterArray);
 
-	BounceMe(cntr_e);
+	BounceMe(cntr_5);
 });
 
-prompt_f.mousedown(function (e) {
-	let tokens_spent = parseInt(cntr_f.text());
+prompt_6.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_6.text());
 
-	TokenTransaction(e, cntr_f, tokens_spent);
+	TokenTransaction(e, cntr_6, tokens_spent);
 	SortCounters(voting_counterArray);
 
-	BounceMe(cntr_f);
+	BounceMe(cntr_6);
 });
 
-prompt_g.mousedown(function (e) {
-	let tokens_spent = parseInt(cntr_g.text());
+prompt_7.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_7.text());
 
-	TokenTransaction(e, cntr_g, tokens_spent);
+	TokenTransaction(e, cntr_7, tokens_spent);
 	SortCounters(voting_counterArray);
 
-	BounceMe(cntr_g);
+	BounceMe(cntr_7);
 });
 
-prompt_h.mousedown(function (e) {
-	let tokens_spent = parseInt(cntr_h.text());
+prompt_8.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_8.text());
 
-	TokenTransaction(e, cntr_h, tokens_spent);
+	TokenTransaction(e, cntr_8, tokens_spent);
 	SortCounters(voting_counterArray);
 
-	BounceMe(cntr_h);
+	BounceMe(cntr_8);
 });
 
-prompt_i.mousedown(function (e) {
-	let tokens_spent = parseInt(cntr_i.text());
+prompt_9.mousedown(function (e) {
+	let tokens_spent = parseInt(cntr_9.text());
 
-	TokenTransaction(e, cntr_i, tokens_spent);
+	TokenTransaction(e, cntr_9, tokens_spent);
 	SortCounters(voting_counterArray);
 
-	BounceMe(cntr_i);
+	BounceMe(cntr_9);
 });
 
-prompt_a.mouseup(function (e) {
-	RemoveBounce(cntr_a);
+prompt_1.mouseup(function (e) {
+	RemoveBounce(cntr_1);
 });
-prompt_b.mouseup(function (e) {
-	RemoveBounce(cntr_b);
+prompt_2.mouseup(function (e) {
+	RemoveBounce(cntr_2);
 });
-prompt_c.mouseup(function (e) {
-	RemoveBounce(cntr_c);
+prompt_3.mouseup(function (e) {
+	RemoveBounce(cntr_3);
 });
-prompt_d.mouseup(function (e) {
-	RemoveBounce(cntr_d);
+prompt_4.mouseup(function (e) {
+	RemoveBounce(cntr_4);
 });
-prompt_e.mouseup(function (e) {
-	RemoveBounce(cntr_e);
+prompt_5.mouseup(function (e) {
+	RemoveBounce(cntr_5);
 });
-prompt_f.mouseup(function (e) {
-	RemoveBounce(cntr_f);
+prompt_6.mouseup(function (e) {
+	RemoveBounce(cntr_6);
 });
-prompt_g.mouseup(function (e) {
-	RemoveBounce(cntr_g);
+prompt_7.mouseup(function (e) {
+	RemoveBounce(cntr_7);
 });
-prompt_h.mouseup(function (e) {
-	RemoveBounce(cntr_h);
+prompt_8.mouseup(function (e) {
+	RemoveBounce(cntr_8);
 });
-prompt_i.mouseup(function (e) {
-	RemoveBounce(cntr_i);
+prompt_9.mouseup(function (e) {
+	RemoveBounce(cntr_9);
 });
 
 $(document).ready(function () {});

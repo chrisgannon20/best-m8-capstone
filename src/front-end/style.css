@@ -1,5 +1,4 @@
-/* CATEGORY PAGE */
-
+/* UNIVERSAL PROPERTY CHANGES */
 .bg-white {
 	background-color: white;
 }
@@ -11,6 +10,12 @@
 .no-select {
 	user-select: none;
 }
+
+.hidden {
+	display: none;
+}
+
+/* CATEGORY PAGE */
 
 * {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -151,17 +156,8 @@ div.prompt {
 	margin: 0 auto;
 }
 
-.arrow {
-	font-size: 80px;
+#submit-button {
 	cursor: pointer;
-}
-
-.btn--float-left {
-	float: left;
-}
-
-.btn--float-right {
-	float: right;
 }
 
 /* VOTING PAGE */
