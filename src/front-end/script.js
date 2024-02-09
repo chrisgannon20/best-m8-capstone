@@ -23,6 +23,8 @@ const category_counterArray = [counter_a, counter_b, counter_c];
 const piggyBal = $("#piggy-bank-balance"); // global variable to store piggy bank balance element
 const piggy = $("#piggy-bank"); // global variable to store piggy bank image element
 
+const submitBtn = $("#submit-button");
+
 piggyBal.text(max_tokens); // set piggy bank to max pool size
 
 // VOTING.html VARIABLES
@@ -94,6 +96,8 @@ arcade_a.mousedown(function (e) {
 
 	JiggleMe(piggy);
 	BounceMe(counter_a);
+
+	ShowSubmit();
 });
 
 arcade_a.mouseup(function (e) {
@@ -328,6 +332,14 @@ function SortCounters(counterArray) {
 			e.addClass("cntr--is-least"); // colors counter red
 		}
 	});
+}
+
+function ShowSubmit() {
+	if (piggyBal.text() == 0) {
+		submitBtn.removeClass("hidden");
+	} else {
+		submitBtn.addClass("hidden");
+	}
 }
 
 // applies jiggle class to element (jiggle animation)
