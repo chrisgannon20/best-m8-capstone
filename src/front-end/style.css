@@ -161,60 +161,39 @@ div.prompt {
 }
 
 /* VOTING PAGE */
-table {
-	margin: 0 auto;
-	color: white;
-}
 
-td div {
-	cursor: pointer;
+h1.category-header {
+	position: relative;
+	top: 2vh;
+	font-size: 24px;
+	margin: 0;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: 6vw auto 6vw auto 6vw auto;
+	display: grid;
+	grid-template-columns: 8vw auto 8vw auto;
 	gap: 1vh 1vh;
 	max-height: 100%;
-  background-color: #2196F3;
+	position: relative;
+	top: 5vh;
 	padding: 1vw;
 }
 .grid-counter {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 1vw;
-  font-size: 18px;
-  text-align: center;
-}
-.grid-prompt {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 1vw;
-  font-size: 18px;
-  text-align: center;
-}
-
-/* .grid-item > div {
-	display: inline-block;
-}
-
-.grid-counter {
-	min-width: 80px;
-	max-width: 8vw;
-	margin: 2vh 5vw 2vh 5vw;
-	background-color: lightgray;
-	color: dimgray;
-	padding: 6px 0;
+	margin: auto 0;
+	padding: inherit;
+	border-radius: 20px;
+	font-size: 18px;
 	text-align: center;
-	border-radius: 14px;
+	user-select: none;
 }
-
 .grid-prompt {
 	border-radius: 20px;
-	max-width: 14vw;
-	margin: 1vw;
-	padding: 1vw;
-	text-align: justify;
-} */
+	padding: inherit;
+	font-size: 18px;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+}
 
 /* ICONS */
 

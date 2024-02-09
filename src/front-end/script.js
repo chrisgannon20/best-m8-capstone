@@ -1,6 +1,6 @@
 // ==== SET GLOBAL VARIABLES ====
 // CATEGORY.html VARIABLES
-const max_tokens = 60; // maximum token pool
+const max_tokens = 100; // maximum token pool
 let tokens_pool = max_tokens; // total tokens left in pool
 
 let token_value = 1; // default token value
@@ -146,6 +146,7 @@ prompt_1.mousedown(function (e) {
 	TokenTransaction(e, cntr_1, tokens_spent);
 	SortCounters(voting_counterArray);
 
+	JiggleMe(piggy);
 	BounceMe(cntr_1);
 });
 
@@ -155,6 +156,7 @@ prompt_2.mousedown(function (e) {
 	TokenTransaction(e, cntr_2, tokens_spent);
 	SortCounters(voting_counterArray);
 
+	JiggleMe(piggy);
 	BounceMe(cntr_2);
 });
 
@@ -164,6 +166,7 @@ prompt_3.mousedown(function (e) {
 	TokenTransaction(e, cntr_3, tokens_spent);
 	SortCounters(voting_counterArray);
 
+	JiggleMe(piggy);
 	BounceMe(cntr_3);
 });
 
@@ -173,6 +176,7 @@ prompt_4.mousedown(function (e) {
 	TokenTransaction(e, cntr_4, tokens_spent);
 	SortCounters(voting_counterArray);
 
+	JiggleMe(piggy);
 	BounceMe(cntr_4);
 });
 
@@ -182,6 +186,7 @@ prompt_5.mousedown(function (e) {
 	TokenTransaction(e, cntr_5, tokens_spent);
 	SortCounters(voting_counterArray);
 
+	JiggleMe(piggy);
 	BounceMe(cntr_5);
 });
 
@@ -191,6 +196,7 @@ prompt_6.mousedown(function (e) {
 	TokenTransaction(e, cntr_6, tokens_spent);
 	SortCounters(voting_counterArray);
 
+	JiggleMe(piggy);
 	BounceMe(cntr_6);
 });
 
@@ -200,6 +206,7 @@ prompt_7.mousedown(function (e) {
 	TokenTransaction(e, cntr_7, tokens_spent);
 	SortCounters(voting_counterArray);
 
+	JiggleMe(piggy);
 	BounceMe(cntr_7);
 });
 
@@ -209,6 +216,7 @@ prompt_8.mousedown(function (e) {
 	TokenTransaction(e, cntr_8, tokens_spent);
 	SortCounters(voting_counterArray);
 
+	JiggleMe(piggy);
 	BounceMe(cntr_8);
 });
 
@@ -218,34 +226,44 @@ prompt_9.mousedown(function (e) {
 	TokenTransaction(e, cntr_9, tokens_spent);
 	SortCounters(voting_counterArray);
 
+	JiggleMe(piggy);
 	BounceMe(cntr_9);
 });
 
 prompt_1.mouseup(function (e) {
+	RemoveJiggle(piggy);
 	RemoveBounce(cntr_1);
 });
 prompt_2.mouseup(function (e) {
+	RemoveJiggle(piggy);
 	RemoveBounce(cntr_2);
 });
 prompt_3.mouseup(function (e) {
+	RemoveJiggle(piggy);
 	RemoveBounce(cntr_3);
 });
 prompt_4.mouseup(function (e) {
+	RemoveJiggle(piggy);
 	RemoveBounce(cntr_4);
 });
 prompt_5.mouseup(function (e) {
+	RemoveJiggle(piggy);
 	RemoveBounce(cntr_5);
 });
 prompt_6.mouseup(function (e) {
+	RemoveJiggle(piggy);
 	RemoveBounce(cntr_6);
 });
 prompt_7.mouseup(function (e) {
+	RemoveJiggle(piggy);
 	RemoveBounce(cntr_7);
 });
 prompt_8.mouseup(function (e) {
+	RemoveJiggle(piggy);
 	RemoveBounce(cntr_8);
 });
 prompt_9.mouseup(function (e) {
+	RemoveJiggle(piggy);
 	RemoveBounce(cntr_9);
 });
 
@@ -315,6 +333,7 @@ function SortCounters(counterArray) {
 
 	// add token count to an array and sort smallest to largest
 	tokenArray = tokenArray.sort((a, b) => a - b);
+	console.log(tokenArray);
 
 	// iterates through and decides which has the most tokens and which the least
 	// counters w/ most turn green, counters w/ anything less turn red
@@ -322,10 +341,9 @@ function SortCounters(counterArray) {
 		// resets the colors of the existing counters
 		e.removeClass("cntr--is-most");
 		e.removeClass("cntr--is-least");
-		e.removeClass("bg-white");
 
 		if (e.text() == 0) {
-			e.addClass("bg-white"); // colors counter white
+			e.addClass("cntr--is-least");
 		} else if (e.text() == tokenArray[tokenArray.length - 1]) {
 			e.addClass("cntr--is-most"); // colors counter green
 		} else {
