@@ -2,8 +2,12 @@
 import express from 'express';
 import { port } from './config/index.js';
 import loader from './loaders/index.js';
+import login from './api/controllers/user/auth/login.js'; // Add this line
 
 const app = express();
+app.use(express.static('src/front-end'));
+app.use(express.json()); // for parsing application/json
+app.post('/api/login', login);
 
 loader(app);
 

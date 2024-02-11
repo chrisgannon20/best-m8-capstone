@@ -211,3 +211,28 @@ function BounceMe(element) {
 function RemoveBounce(element) {
 	element.removeClass("bounce");
 }
+
+// Login form submission
+document.querySelector('#login-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const passcode = document.querySelector('#passcode').value;
+
+  fetch('/api/login', { // Ensure the URL is correct, consider using a full path if necessary
+    method: 'POST',
+    body: JSON.stringify({ passcode }),
+    headers: { 'Content-Type': 'application/json' },
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.redirect) {
+      // If login is successful and a redirect URL is provided
+      window.location.href = data.redirect;
+    } else {
+      // Handle login failure, perhaps show an error message to the user
+      alert("Login failed. Please check your passcode.");
+    }
+  }).catch(error => {
+    console.error('Error:', error);
+  });
+});
