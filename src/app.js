@@ -4,6 +4,7 @@ import { port } from './config/index.js';
 import loader from './loaders/index.js';
 
 const app = express();
+app.use(express.static('src/front-end'));
 
 loader(app);
 
