@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Job Satisfaction</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="icon" href="./media/favicon.ico" type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<header id="nav-bar">
+			<span id="nav-menu" class="material-symbols-outlined"> menu </span>
+		</header>
+		<main>
+			<div id="token-section">
+				<h1 id="catch-phrase">I'd spend my tokens on...</h1>
+				<div id="piggy-container">
+					<img src="./media/piggy-bank.png" alt="piggy bank" id="piggy-bank" />
+					<div id="piggy-bank-balance">60</div>
+				</div>
+				<div id="token-container">
+					<button
+						id="token-value-1"
+						class="tkn tkn--is-selected"
+						oncontextmenu="return false;"
+					>
+						1
+					</button>
+					<button id="token-value-5" class="tkn" oncontextmenu="return false;">
+						5
+					</button>
+					<button id="token-value-10" class="tkn" oncontextmenu="return false;">
+						10
+					</button>
+				</div>
+			</div>
+			<div id="feedback-section">
+				<h1 class="category-header">Job Hurdles</h1>
+				<div class="grid-container">
+					<div id="cntr-1" class="grid-counter cntr--is-least">0</div>
+					<div
+						id="prompt-1"
+						class="grid-prompt bg-white swipe-in"
+						oncontextmenu="return false;"
+					>
+						Communication
+					</div>
+					<div id="cntr-2" class="grid-counter cntr--is-least">0</div>
+					<div
+						id="prompt-2"
+						class="grid-prompt bg-white swipe-in"
+						oncontextmenu="return false;"
+					>
+						Base Level Training
+					</div>
+					<div id="cntr-3" class="grid-counter cntr--is-least">0</div>
+					<div
+						id="prompt-3"
+						class="grid-prompt bg-white swipe-in"
+						oncontextmenu="return false;"
+					>
+						Poor Leadership
+					</div>
+					<div id="cntr-4" class="grid-counter cntr--is-least">0</div>
+					<div
+						id="prompt-4"
+						class="grid-prompt bg-white swipe-in"
+						oncontextmenu="return false;"
+					>
+						Job Ambiguity
+					</div>
+					<div id="cntr-5" class="grid-counter cntr--is-least">0</div>
+					<div
+						id="prompt-5"
+						class="grid-prompt bg-white swipe-in"
+						oncontextmenu="return false;"
+					>
+						Staffing Struggles
+					</div>
+					<div id="cntr-6" class="grid-counter cntr--is-least">0</div>
+					<div
+						id="prompt-6"
+						class="grid-prompt bg-white swipe-in"
+						oncontextmenu="return false;"
+					>
+						Broken Equipment
+					</div>
+					<div id="cntr-7" class="grid-counter cntr--is-least">0</div>
+					<div
+						id="prompt-7"
+						class="grid-prompt bg-white swipe-in"
+						oncontextmenu="return false;"
+					>
+						Poor Organization Culture
+					</div>
+					<div id="cntr-8" class="grid-counter cntr--is-least">0</div>
+					<div
+						id="prompt-8"
+						class="grid-prompt bg-white swipe-in"
+						oncontextmenu="return false;"
+					>
+						Teleworking
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="./script.js"></script>
+	</body>
+</html>
