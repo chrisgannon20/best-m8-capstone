@@ -18,7 +18,7 @@ $("#song-2").click(function (e) {
 
 $("#song-3").click(function (e) {
 	$("span").css("width", "64%");
-	$("#where-to").attr("href", "./hurdle.html");
+	$("#where-to").attr("href", "./hurdles.html");
 });
 
 $(function() {
