@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>My Website</title>
+		<link rel="stylesheet" href="./style2.css" />
+		<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400"
+			rel="stylesheet"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>
+				<span id="timer-minutes">00</span> :
+				<span id="timer-seconds">00</span>
+			</h1>
+
+			<input type="radio" name="slider" id="item-1" checked />
+			<input type="radio" name="slider" id="item-2" />
+			<input type="radio" name="slider" id="item-3" />
+			<div class="cards">
+				<label class="card noselect" for="item-1" id="song-1">
+					<img
+						src="https://images.pexels.com/photos/4835452/pexels-photo-4835452.jpeg?auto=format&fit=crop&w=900&q=60"
+						alt="song"
+					/>
+				</label>
+				<label class="card noselect" for="item-2" id="song-2">
+					<img
+						src="https://images.pexels.com/photos/3800795/pexels-photo-3800795.jpeg?auto=format&fit=crop&w=900&q=60"
+						alt="song"
+					/>
+				</label>
+				<label class="card noselect" for="item-3" id="song-3">
+					<img
+						src="https://images.pexels.com/photos/4842563/pexels-photo-4842563.jpeg?auto=format&fit=crop&w=900&q=60"
+						alt="song"
+					/>
+				</label>
+			</div>
+			<div class="player">
+				<div class="upper-part">
+					<div id="play-btn" class="play-icon">
+						<a id="where-to" href="satisfaction.html">
+							<svg
+								width="20"
+								height="20"
+								fill="#2992dc"
+								stroke="#2992dc"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								class="feather feather-play"
+								viewBox="0 0 24 24"
+							>
+								<defs />
+								<path d="M5 3l14 9-14 9V3z" />
+							</svg>
+						</a>
+					</div>
+					<div class="info-area" id="test">
+						<label class="song-info noselect" id="song-info-1">
+							<div class="title">Satisfaction</div>
+							<div class="sub-line">
+								<div class="subtitle">Makes me want to come to work</div>
+								<div class="time">4:23</div>
+							</div>
+						</label>
+						<label class="song-info" id="song-info-2">
+							<div class="title">Efficiency</div>
+							<div class="sub-line">
+								<div class="subtitle">Could be quicker / Take fewer steps</div>
+								<div class="time">2:18</div>
+							</div>
+						</label>
+						<label class="song-info" id="song-info-3">
+							<div class="title">Hurdles</div>
+							<div class="sub-line">
+								<div class="subtitle">Can't do my job</div>
+								<div class="time">3:10</div>
+							</div>
+						</label>
+					</div>
+				</div>
+				<div class="progress-bar">
+					<span class="progress"></span>
+				</div>
+			</div>
+		</div>
+		<script src="./script2.js"></script>
+	</body>
+</html>

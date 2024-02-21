@@ -1,0 +1,199 @@
+/* UNIVERSAL PROPERTY CHANGES */
+.bg-white {
+	background-color: white;
+}
+
+.black {
+	color: black;
+}
+
+.no-select {
+	user-select: none;
+}
+
+.hidden {
+	display: none;
+}
+
+/* CATEGORY PAGE */
+
+* {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+	background-color: #313350;
+}
+
+body {
+	margin: 0;
+	position: relative;
+	text-align: center;
+	color: black;
+}
+
+header {
+	position: relative;
+	height: 40px;
+	width: 100%;
+	background-color: #c33b4d;
+}
+
+#nav-menu {
+	float: left;
+	font-size: 40px;
+}
+
+main {
+	position: relative;
+	height: calc(100% - 40px);
+	width: inherit;
+}
+
+#feedback-section {
+	position: relative;
+	height: 100%;
+	background-color: #fea508;
+}
+
+#catch-phrase {
+	position: relative;
+	padding-top: 2vh;
+}
+
+#arcade-container {
+	position: relative;
+	top: 20%;
+}
+
+.arcade-bundle {
+	display: inline-block;
+	-webkit-transition: transform 2s ease-out;
+	-moz-transition: transform 2s ease-out;
+	-o-transition: transform 2s ease-out;
+	transition: transform 2s ease-out;
+}
+
+.arcade-bundle:hover {
+	transform: scale(150%);
+}
+
+.arcade {
+	min-width: 80px;
+	max-width: 10vw;
+	margin: 0 5vw 0vw 5vw;
+	cursor: pointer;
+}
+
+/* .arcade:hover {
+	transform: scale(150%);
+} */
+
+div.prompt {
+	display: flex;
+	border-radius: 20px;
+	/* border: solid black 2px; */
+	max-width: 18vw;
+	margin: 1vw;
+	padding: 1vw;
+	text-align: justify;
+}
+
+.prompt p {
+	margin: 0 auto;
+}
+
+#submit-button {
+	cursor: pointer;
+}
+
+/* ICONS */
+
+.material-symbols-outlined {
+	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0;
+	color: #fde6e8;
+}
+
+/* ANIMATIONS */
+
+.jiggleright {
+	animation-name: jiggleRt;
+	animation-duration: 0.5s;
+}
+
+.jiggleleft {
+	animation-name: jiggleLt;
+	animation-duration: 0.5s;
+}
+
+@keyframes jiggleRt {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(-10deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes jiggleLt {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+.bounce {
+	position: relative;
+	animation-name: bounce;
+	animation-duration: 0.5s;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translate(0, 0);
+	}
+	30% {
+		transform: translate(0, -15px);
+	}
+	45% {
+		transform: translate(0, 0);
+	}
+	65% {
+		transform: translate(0, -5px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.swipe-in {
+	position: relative;
+	animation-name: swipe-in;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes swipe-in {
+	0% {
+		transform: translate(1200px, 0px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
